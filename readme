@@ -1,0 +1,12 @@
+vibe-coding-android/
+│
+├── 01-app-business-models.md
+├── 02-app-idea-validation.md
+├── 03-ai-product-research.md
+├── 04-mvp-development.md
+├── 05-ai-assisted-app-planning.md
+├── 06-ai-ui-ux.md
+├── 07-forms-storage-user-input.md
+├── 08-camera-gallery-file-access.md
+├── 09-notifications-background-tasks.md
+└── 10-api-integration.md
