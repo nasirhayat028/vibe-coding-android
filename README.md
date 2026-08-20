@@ -93,6 +93,107 @@ This guide teaches you how to build Android apps by combining **good product thi
 
 ---
 
+## 🛠️ Hands-On Development Track
+
+The [`hands-on/`](hands-on/) directory turns the planning concepts above into a practical workflow. It follows one example application from prompt creation through development, backend configuration, release testing, and Play Store publishing.
+
+### [01-ai-prompting-for-app-development.md](hands-on/01-ai-prompting-for-app-development.md)
+**Turn an Idea into a Build Prompt**
+- Define the problem, users, core features, data, and integrations
+- Refine vague ideas into clear requirements
+- Specify important AI models and storage needs
+- **Key principle:** Think clearly → Define clearly → Prompt clearly → Build
+
+### [02-ai-app-generation-with-bolt.md](hands-on/02-ai-app-generation-with-bolt.md)
+**Generate the Initial App with Bolt**
+- Send the refined prompt to an AI app builder
+- Test the generated user flow instead of trusting the first result
+- Describe bugs with the action, actual result, and expected result
+- **Key principle:** AI-generated code still requires developer validation
+
+### [03-testing-and-debugging-with-expo-go.md](hands-on/03-testing-and-debugging-with-expo-go.md)
+**Test on a Real Android Device**
+- Preview an Expo app through Expo Go
+- Test mobile-only behavior such as camera, permissions, and touch interactions
+- Run the complete user journey and repeat the test-fix-test cycle
+- **Key principle:** Visual completion is not functional completion
+
+### [04-development-and-debugging-with-qoder.md](hands-on/04-development-and-debugging-with-qoder.md)
+**Continue Development Locally with Qoder**
+- Open the generated project and run `npx expo start`
+- Use terminal errors and reproducible behavior to guide debugging
+- Combine AI-assisted fixes with manual code review
+- **Key principle:** Use AI for speed while keeping control through verification
+
+### [05-api-keys-and-ai-service-configuration.md](hands-on/05-api-keys-and-ai-service-configuration.md)
+**Configure AI Services Securely**
+- Connect services such as Gemini and OpenAI
+- Test authentication, requests, responses, usage, and billing limits
+- Handle user-provided API keys carefully and avoid exposing credentials
+- **Key principle:** Treat API keys as sensitive credentials
+
+### [06-firebase-backend-and-data-management.md](hands-on/06-firebase-backend-and-data-management.md)
+**Add Firebase Authentication and Cloud Data**
+- Create a Firebase project
+- Configure email/password authentication and a database
+- Decide what belongs in local storage, Firebase, or both
+- Protect data with appropriate access rules
+- **Key principle:** Choose storage based on the application's requirements
+
+### [07-building-a-firebase-management-web-app.md](hands-on/07-building-a-firebase-management-web-app.md)
+**Build a Backend Management Interface**
+- Create a separate web app for authorized data management
+- View, upload, download, search, and manage Firebase records
+- Test that changes remain consistent across the web app and Android app
+- **Key principle:** The mobile app serves users; the management app supports operations
+
+### [08-building-production-aab-with-expo.md](hands-on/08-building-production-aab-with-expo.md)
+**Create a Production Android App Bundle**
+- Prepare the app for release with Expo cloud builds
+- Authenticate with Expo and generate an `.aab` file
+- Understand why a successful build still needs release testing
+- **Key principle:** Build → Verify → Package → Test → Release
+
+### [09-play-store-internal-testing.md](hands-on/09-play-store-internal-testing.md)
+**Validate the Production Build Internally**
+- Upload the AAB to Google Play Console
+- Create an Internal Testing release and add testers
+- Collect feedback, reproduce issues, and publish updated builds when needed
+- **Key principle:** Test with a limited audience before public release
+
+### [10-play-store-listing-and-publishing.md](hands-on/10-play-store-listing-and-publishing.md)
+**Prepare the Listing and Publish**
+- Create the title, descriptions, icon, screenshots, and promotional assets
+- Review Play Store requirements and listing accuracy
+- Make sure every public claim matches the real application
+- **Key principle:** Present the product honestly, then publish it
+
+### Recommended Hands-On Order
+
+```text
+Idea and requirements
+	↓
+Clear AI prompt
+	↓
+Bolt app generation
+	↓
+Expo Go device testing
+	↓
+Qoder development and debugging
+	↓
+AI API and Firebase configuration
+	↓
+Firebase management web app
+	↓
+Production AAB
+	↓
+Play Store internal testing
+	↓
+Store listing and publishing
+```
+
+---
+
 ## 🎯 How to Use This Guide
 
 ### If you're just starting:
@@ -110,6 +211,9 @@ This guide teaches you how to build Android apps by combining **good product thi
 - **Camera or photos:** [08-camera-gallery-file-access.md](08-camera-gallery-file-access.md)
 - **Notifications:** [09-notifications-background-tasks.md](09-notifications-background-tasks.md)
 - **Backend/APIs:** [10-api-integration.md](10-api-integration.md)
+
+### If you want practical implementation:
+Read the lessons in [`hands-on/`](hands-on/) from `01` through `10` to follow the complete path from an app idea to Play Store publishing.
 
 ---
 
@@ -143,7 +247,18 @@ vibe-coding-android/
 ├── 07-forms-storage-user-input.md
 ├── 08-camera-gallery-file-access.md
 ├── 09-notifications-background-tasks.md
-└── 10-api-integration.md
+├── 10-api-integration.md
+└── hands-on/
+	├── 01-ai-prompting-for-app-development.md
+	├── 02-ai-app-generation-with-bolt.md
+	├── 03-testing-and-debugging-with-expo-go.md
+	├── 04-development-and-debugging-with-qoder.md
+	├── 05-api-keys-and-ai-service-configuration.md
+	├── 06-firebase-backend-and-data-management.md
+	├── 07-building-a-firebase-management-web-app.md
+	├── 08-building-production-aab-with-expo.md
+	├── 09-play-store-internal-testing.md
+	└── 10-play-store-listing-and-publishing.md
 ```
 
 ---
